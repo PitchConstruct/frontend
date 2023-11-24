@@ -1,0 +1,8 @@
+# Project dependencies
+node_modules/
+
+# Build
+build/
+
+# Vite config file
+vite.config.ts
