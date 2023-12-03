@@ -1,7 +1,8 @@
 export interface IPresentaion {
   name: string
   slogan: string
-  //   problems: string[]
+  problem_1: string
+  solve_1: string
   audience: string
   description: string
   //   solvings: string[]

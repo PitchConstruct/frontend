@@ -7,9 +7,10 @@ import {
   Button,
   Flex,
   Loader,
+  // Text,
 } from '@mantine/core'
 import { useForm } from '@mantine/form'
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import { generatePresentation } from 'utils'
 
 export function GeneratorPage() {
@@ -17,13 +18,32 @@ export function GeneratorPage() {
     initialValues: {
       name: '',
       slogan: '',
+      problem_1: '',
+      problem_2: '',
+      problem_3: '',
+      problem_4: '',
+      problem_5: '',
+      solve_1: '',
       audience: '',
       description: '',
     },
     validate: {
       name: (value) =>
         value.trim().length < 2 ? 'Field length must be > 2' : null,
-      // slogan: (value) =>
+      slogan: (value) =>
+        value.trim().length < 2 ? 'Field length must be > 2' : null,
+      problem_1: (value) =>
+        value.trim().length < 2 ? 'Field length must be > 2' : null,
+
+      solve_1: (value) =>
+        value.trim().length < 2 ? 'Field length must be > 2' : null,
+      // problem_2: (value) =>
+      //   value.trim().length < 2 ? 'Field length must be > 2' : null,
+      // problem_3: (value) =>
+      //   value.trim().length < 2 ? 'Field length must be > 2' : null,
+      // problem_4: (value) =>
+      //   value.trim().length < 2 ? 'Field length must be > 2' : null,
+      // problem_5: (value) =>
       //   value.trim().length < 2 ? 'Field length must be > 2' : null,
       // audience: (value) =>
       //   value.trim().length < 2 ? 'Field length must be > 2' : null,
@@ -33,6 +53,21 @@ export function GeneratorPage() {
   })
 
   const [isLoading, setIsLoading] = useState(false)
+  const [problems] = useState<ReactNode[]>([])
+  const [solvings] = useState<ReactNode[]>([])
+  // const addField = () => {
+  //   setFields((prev) => [
+  //     ...prev,
+  //     <TextInput
+  //       key={fields.length + 2}
+  //       placeholder={`Ваша проблема №${fields.length + 2}`}
+  //       mt="md"
+  //       name={`problem_${fields.length + 2}`}
+  //       variant="filled"
+  //       // {...form.getInputProps(`problem_${fields.length + 2}`)}
+  //     />,
+  //   ])
+  // }
 
   return (
     <Flex align="center" justify="center" h="100%" w="100%">
@@ -75,14 +110,44 @@ export function GeneratorPage() {
               {...form.getInputProps('slogan')}
             />
           </SimpleGrid>
+          <TextInput
+            label="Проблемы"
+            placeholder="Ваша проблема №1"
+            mt="md"
+            name="problem_1"
+            variant="filled"
+            {...form.getInputProps('problem_1')}
+          />
+
+          {problems}
+          {/* {fields.length < 4 && (
+            <Text
+              mt={10}
+              styles={{ root: { cursor: 'pointer' } }}
+              onClick={addField}
+            >
+              + Добавить поле
+            </Text>
+          )} */}
 
           <TextInput
-            label="Целевая аудитория"
-            placeholder="Ваша целевая аудитория"
+            label="Решение"
+            placeholder="Ваше решение №1"
             mt="md"
-            name="audience"
+            name="solve_1"
             variant="filled"
-            {...form.getInputProps('audience')}
+            {...form.getInputProps('solve_1')}
+          />
+
+          {solvings}
+
+          <TextInput
+            label="Сфера рынка (TAM-SAM-SOM)"
+            placeholder="Ваше сфера рынка"
+            mt="md"
+            name="sphere"
+            variant="filled"
+            {...form.getInputProps('sphere')}
           />
           <Textarea
             mt="md"
@@ -94,47 +159,6 @@ export function GeneratorPage() {
             name="description"
             variant="filled"
             {...form.getInputProps('description')}
-          />
-
-          <TextInput
-            label="Решение"
-            placeholder="Ваше решение"
-            mt="md"
-            name="solve"
-            variant="filled"
-            {...form.getInputProps('solve')}
-          />
-
-          <TextInput
-            label="Сфера рынка (TAM-SAM-SOM)"
-            placeholder="Ваше сфера рынка"
-            mt="md"
-            name="sphere"
-            variant="filled"
-            {...form.getInputProps('sphere')}
-          />
-
-          <TextInput
-            label="Конкуренты"
-            placeholder="Ваши конкуренты"
-            mt="md"
-            name="conqurents 1"
-            variant="filled"
-            {...form.getInputProps('conqurents')}
-          />
-          <TextInput
-            placeholder="Ваши конкуренты"
-            mt="md"
-            name="conqurents 2"
-            variant="filled"
-            {...form.getInputProps('conqurents')}
-          />
-          <TextInput
-            placeholder="Ваши конкуренты"
-            mt="md"
-            name="conqurents 3"
-            variant="filled"
-            {...form.getInputProps('conqurents')}
           />
 
           <Group justify="center" mt="xl">
