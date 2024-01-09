@@ -1,9 +1,9 @@
-import { GeneratorPage, Layout } from './pages'
+import { Main, Layout } from './pages'
 
 function App() {
   return (
     <Layout>
-      <GeneratorPage />
+      <Main />
     </Layout>
   )
 }

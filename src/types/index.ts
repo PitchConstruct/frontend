@@ -1,10 +1,23 @@
 export interface IPresentaion {
   name: string
-  slogan: string
+  losung: string
+  tam: string
   problem_1: string
   solve_1: string
   audience: string
   description: string
+  logo: string
+  price: number
+  income: number
+  clients: number
+  rival_1: string
+  memberName_1: string
+  memberSurname_1: string
+  background_1: string
+  goal_1: string
+  telegram: string
+  phone: string
+  website: string
   //   solvings: string[]
   //   sphere: string
   //   conqurents: string[]
