@@ -1,7 +1,6 @@
 {
   "name": "pitch-construct",
   "private": true,
-  "proxy": "http://localhost:5173/",
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://GreenDevald1523.github.io/PitchConstruct/frontend",

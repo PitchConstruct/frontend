@@ -33,6 +33,7 @@ export const generatePresentation = (data: IPresentaion) => {
     shape: pres.ShapeType.rect,
     rectRadius: 0.5,
     fill: { color: 'ed7d31' },
+    fontFace: 'consolas',
   })
   slide1.addText(data.losung, {
     x: '13%',
@@ -41,6 +42,7 @@ export const generatePresentation = (data: IPresentaion) => {
     bold: true,
     align: 'center',
     color: 'ed7d31',
+    fontFace: 'consolas',
   })
   slide1.addImage({
     data: 'image/png;base64,' + data.logo,
@@ -57,17 +59,46 @@ export const generatePresentation = (data: IPresentaion) => {
     y: '15%',
     fontSize: 60,
     bold: true,
+    fontFace: 'consolas',
   })
   slide2.addText('Проблема 1', {
     x: '5%',
     y: '25%',
     fontSize: 20,
     bold: true,
+    fontFace: 'consolas',
   })
   slide2.addText(data.problem_1, {
     x: '5%',
     y: '30%',
     fontSize: 20,
+    fontFace: 'consolas',
+  })
+  slide2.addText('Проблема 2', {
+    x: '5%',
+    y: '40%',
+    fontSize: 20,
+    bold: true,
+    fontFace: 'consolas',
+  })
+  slide2.addText('Дефицит товара', {
+    x: '5%',
+    y: '45%',
+    fontSize: 20,
+    fontFace: 'consolas',
+  })
+  slide2.addText('Проблема 3', {
+    x: '5%',
+    y: '55%',
+    fontSize: 20,
+    bold: true,
+    fontFace: 'consolas',
+  })
+  slide2.addText('Ограниченный бюджет', {
+    x: '5%',
+    y: '60%',
+    fontSize: 20,
+    fontFace: 'consolas',
   })
   // slide2.addImage({ path: '../assets/problem.png' })
 
@@ -78,17 +109,46 @@ export const generatePresentation = (data: IPresentaion) => {
     y: '15%',
     fontSize: 60,
     bold: true,
+    fontFace: 'consolas',
   })
   slide3.addText('Решение 1', {
     x: '5%',
     y: '25%',
     fontSize: 20,
     bold: true,
+    fontFace: 'consolas',
   })
   slide3.addText(data.solve_1, {
     x: '5%',
     y: '30%',
     fontSize: 20,
+    fontFace: 'consolas',
+  })
+  slide3.addText('Решение 2', {
+    x: '5%',
+    y: '40%',
+    fontSize: 20,
+    bold: true,
+    fontFace: 'consolas',
+  })
+  slide3.addText('Нанять сотрудников', {
+    x: '5%',
+    y: '45%',
+    fontSize: 20,
+    fontFace: 'consolas',
+  })
+  slide3.addText('Решение 3', {
+    x: '5%',
+    y: '55%',
+    fontSize: 20,
+    bold: true,
+    fontFace: 'consolas',
+  })
+  slide3.addText('Заинтересовать инвесторов', {
+    x: '5%',
+    y: '60%',
+    fontSize: 20,
+    fontFace: 'consolas',
   })
 
   const slide4 = pres.addSlide({ masterName: 'MASTER_SLIDE' })
@@ -98,17 +158,20 @@ export const generatePresentation = (data: IPresentaion) => {
     y: '15%',
     fontSize: 60,
     bold: true,
+    fontFace: 'consolas',
   })
   slide4.addText('Краткое описание продукта', {
     x: '5%',
     y: '25%',
     fontSize: 20,
     bold: true,
+    fontFace: 'consolas',
   })
   slide4.addText(data.description, {
     x: '5%',
     y: '30%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
 
   const slide5 = pres.addSlide({ masterName: 'MASTER_SLIDE' })
@@ -118,11 +181,13 @@ export const generatePresentation = (data: IPresentaion) => {
     y: '15%',
     fontSize: 60,
     bold: true,
+    fontFace: 'consolas',
   })
   slide5.addText(data.tam, {
     x: '5%',
     y: '30%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
   slide5.addShape(pres.ShapeType.rect, {
     y: '60%',
@@ -134,6 +199,7 @@ export const generatePresentation = (data: IPresentaion) => {
     y: '95%',
     x: '10%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
 
   slide5.addShape(pres.ShapeType.rect, {
@@ -147,6 +213,7 @@ export const generatePresentation = (data: IPresentaion) => {
     y: '95%',
     x: '46%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
 
   slide5.addShape(pres.ShapeType.rect, {
@@ -160,6 +227,7 @@ export const generatePresentation = (data: IPresentaion) => {
     y: '95%',
     x: '82%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
 
   const slide6 = pres.addSlide({ masterName: 'MASTER_SLIDE' })
@@ -174,6 +242,21 @@ export const generatePresentation = (data: IPresentaion) => {
     y: '30%',
     bullet: true,
     fontSize: 20,
+    fontFace: 'consolas',
+  })
+  slide6.addText('Amazon', {
+    x: '5%',
+    y: '40%',
+    bullet: true,
+    fontSize: 20,
+    fontFace: 'consolas',
+  })
+  slide6.addText('Apple', {
+    x: '5%',
+    y: '50%',
+    bullet: true,
+    fontSize: 20,
+    fontFace: 'consolas',
   })
 
   const slide7 = pres.addSlide({ masterName: 'MASTER_SLIDE' })
@@ -187,6 +270,7 @@ export const generatePresentation = (data: IPresentaion) => {
     x: '5%',
     y: '30%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
   slide7.addText('Себестоимость: ' + String(data.price) + ' ₽', {
     x: '5%',
@@ -197,6 +281,7 @@ export const generatePresentation = (data: IPresentaion) => {
     x: '5%',
     y: '50%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
 
   const slide8 = pres.addSlide({ masterName: 'MASTER_SLIDE' })
@@ -205,21 +290,44 @@ export const generatePresentation = (data: IPresentaion) => {
     y: '15%',
     fontSize: 60,
     bold: true,
+    fontFace: 'consolas',
   })
-  slide8.addText(data.memberName_1, {
+  slide8.addText('Имя: ' + data.member1.memberName_1, {
     x: '5%',
     y: '30%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
-  slide8.addText(data.memberSurname_1, {
+  slide8.addText('Фамилия: ' + data.member1.memberSurname_1, {
     x: '5%',
     y: '35%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
-  slide8.addText(data.background_1, {
+  slide8.addText('Бекграунд: ' + data.member1.background_1, {
     x: '5%',
     y: '40%',
     fontSize: 20,
+    fontFace: 'consolas',
+  })
+
+  slide8.addText('Имя: Кирилл', {
+    x: '50%',
+    y: '30%',
+    fontSize: 20,
+    fontFace: 'consolas',
+  })
+  slide8.addText('Фамилия: Игнатьев', {
+    x: '50%',
+    y: '35%',
+    fontSize: 20,
+    fontFace: 'consolas',
+  })
+  slide8.addText('Бекграунд: Бекенд-разработчик', {
+    x: '50%',
+    y: '40%',
+    fontSize: 20,
+    fontFace: 'consolas',
   })
 
   const slide9 = pres.addSlide({ masterName: 'MASTER_SLIDE' })
@@ -228,12 +336,14 @@ export const generatePresentation = (data: IPresentaion) => {
     y: '15%',
     fontSize: 60,
     bold: true,
+    fontFace: 'consolas',
   })
   slide9.addText(data.goal_1, {
     x: '5%',
     y: '30%',
     bullet: true,
     fontSize: 20,
+    fontFace: 'consolas',
   })
 
   const slide10 = pres.addSlide({ masterName: 'MASTER_SLIDE' })
@@ -242,21 +352,25 @@ export const generatePresentation = (data: IPresentaion) => {
     y: '15%',
     fontSize: 60,
     bold: true,
+    fontFace: 'consolas',
   })
   slide10.addText('Контактный номер: ' + data.phone, {
     x: '5%',
     y: '30%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
   slide10.addText('Telegram: @' + data.telegram, {
     x: '5%',
     y: '35%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
   slide10.addText('Сайт: ' + data.website, {
     x: '5%',
     y: '40%',
     fontSize: 20,
+    fontFace: 'consolas',
   })
 
   // 4. Save the Presentation

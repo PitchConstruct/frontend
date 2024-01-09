@@ -11,9 +11,7 @@ export interface IPresentaion {
   income: number
   clients: number
   rival_1: string
-  memberName_1: string
-  memberSurname_1: string
-  background_1: string
+  member1: IMember
   goal_1: string
   telegram: string
   phone: string
@@ -26,4 +24,10 @@ export interface IPresentaion {
   //   traction: string
   //   income: number
   //   clients_count: number
+}
+
+export interface IMember {
+  memberName_1: string
+  memberSurname_1: string
+  background_1: string
 }

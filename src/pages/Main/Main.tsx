@@ -48,14 +48,21 @@ export function Main() {
         <form
           onSubmit={form.onSubmit(async (values) => {
             setIsLoading(true)
-            const res = await sendIndustry(values.industry).then((res) => {
-              setIsLoading(false)
-              return res
-            })
-
-            // const res = { logo: '', losung: '', tam: '' }
-
-            generatePresentation({ ...values, ...res })
+            await sendIndustry(values.industry)
+              .then((res) => {
+                setIsLoading(false)
+                return res
+              })
+              .then((res) =>
+                generatePresentation({
+                  ...values,
+                  ...res,
+                })
+              )
+              .catch((error) => {
+                console.error(error)
+                setIsLoading(false)
+              })
           })}
           style={{
             width: '100%',
@@ -247,7 +254,7 @@ export function Main() {
                 name="memberName_1"
                 variant="filled"
                 withAsterisk
-                {...form.getInputProps('memberName_1')}
+                {...form.getInputProps('member1.memberName_1')}
               />
               <TextInput
                 label="Фамилия участника 1"
@@ -255,7 +262,7 @@ export function Main() {
                 name="memberSurname_1"
                 variant="filled"
                 withAsterisk
-                {...form.getInputProps('memberSurname_1')}
+                {...form.getInputProps('member1.memberSurname_1')}
               />
               <TextInput
                 label="Бэкграунд участника 1"
@@ -263,7 +270,7 @@ export function Main() {
                 name="background_1"
                 variant="filled"
                 withAsterisk
-                {...form.getInputProps('background_1')}
+                {...form.getInputProps('member1.background_1')}
               />
               {/* <FileInput
                 accept="image/png,image/jpeg"
